@@ -1,0 +1,54 @@
+"use client";
+import { SiFacebook, SiInstagram } from "react-icons/si";
+import { SlSocialTwitter } from "react-icons/sl";
+
+export default function Footer() {
+  return (
+    <footer className="bg-espresso-800 text-coffee py-10 mt-20">
+      <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* Brand / Text */}
+        <div className="text-center md:text-left">
+          <h2 className="text-3xl font-bold text-beige-50 font-playfair italic">
+            My Pilates
+          </h2>
+          <p className="text-sm text-beige-200 mt-2">
+            Move with strength, balance, and calm.
+          </p>
+        </div>
+
+        {/* Social icons */}
+        <div className="flex gap-6 text-2xl">
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:bg-coffee hover:text-[#f4f1ef] rounded-full p-2 duration-200 transition-colors"
+          >
+            <SlSocialTwitter />
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:bg-coffee hover:text-[#f4f1ef] rounded-full p-2 duration-200 transition-colors"
+          >
+            <SiFacebook />
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:bg-coffee hover:text-[#f4f1ef] rounded-full p-2 duration-200 transition-colors"
+          >
+            <SiInstagram />
+          </a>
+        </div>
+      </div>
+
+      {/* Copyright */}
+      <div className="mt-8 text-center text-sm text-beige-300">
+        © {new Date().getFullYear()} Pilates Studio. All rights reserved.
+      </div>
+    </footer>
+  );
+}
