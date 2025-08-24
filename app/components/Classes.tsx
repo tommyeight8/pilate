@@ -37,7 +37,7 @@ const Classes = () => {
       {/* Title */}
       <div className="flex items-center mb-12 md:mb-20">
         <div className="flex-grow border-t border-coffee"></div>
-        <p className="mx-4 font-playfair text-6xl text-coffee text-center opsz-auto no-synth">
+        <p className="mx-4 font-playfair italic text-6xl text-coffee text-center opsz-auto no-synth">
           Classes
         </p>
         <div className="flex-grow border-t border-coffee"></div>
