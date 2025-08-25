@@ -23,9 +23,6 @@ export default function Header() {
       )}
     >
       <div className="max-w-[1200px] mx-auto flex justify-between p-6">
-        {/* <h1 className="text-4xl text-expresso font-bold font-playfair italic no-synth">
-          My Pilates
-        </h1> */}
         <Image
           src="/pace_studio_word_logo.png"
           alt=""

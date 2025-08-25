@@ -19,7 +19,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section className="relative py-16 md:py-24 bg-bg">
+    <section className="relative py-16 md:py-24 bg-bg overflow-x-clip">
       {/* subtle background ornament */}
       <div className="pointer-events-none absolute inset-0 opacity-30">
         <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-coffee/20 blur-3xl" />

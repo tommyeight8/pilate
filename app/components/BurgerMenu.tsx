@@ -86,7 +86,12 @@ export default function BurgerMenu({ scrolled = false }: Props) {
               closed: { rotate: 0, y: -6 },
               open: { rotate: 45, y: 0 },
             }}
-            transition={{ type: "spring", stiffness: 500, damping: 30 }}
+            transition={{
+              type: "spring",
+              stiffness: 900,
+              damping: 10,
+              mass: 0.2,
+            }}
             style={{ transformOrigin: "center" }}
           />
           {/* bottom line */}
@@ -101,7 +106,12 @@ export default function BurgerMenu({ scrolled = false }: Props) {
               closed: { rotate: 0, y: 6 },
               open: { rotate: -45, y: 0 },
             }}
-            transition={{ type: "spring", stiffness: 500, damping: 30 }}
+            transition={{
+              type: "spring",
+              stiffness: 900,
+              damping: 10,
+              mass: 0.2,
+            }}
             style={{ transformOrigin: "center" }}
           />
         </div>

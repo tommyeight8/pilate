@@ -86,7 +86,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${playfair.variable} ${bodoni.variable} antialiased`}>
-        <Header />
+        {/* <Header /> */}
         {children}
         <Footer />
       </body>
