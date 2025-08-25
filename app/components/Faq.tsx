@@ -49,11 +49,11 @@ export default function Faq() {
       : null;
 
   return (
-    <section className="w-full min-h-screen text-coffee">
+    <section className="w-full text-coffee">
       <div className="max-w-[1200px] mx-auto my-24 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
         {/* Left column: image */}
         <motion.div
-          className="order-1 lg:order-none"
+          className="order-1 lg:order-none rounded-xl overflow-hidden"
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}

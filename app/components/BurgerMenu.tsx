@@ -31,7 +31,9 @@ const menuItems: MenuItem[] = [
   },
 ];
 
-export default function BurgerMenu() {
+type Props = { scrolled?: boolean };
+
+export default function BurgerMenu({ scrolled = false }: Props) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
   const menuId = useId();
@@ -55,6 +57,11 @@ export default function BurgerMenu() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  // span color: light at top, dark after scroll
+  const closedColor = scrolled ? "bg-expresso" : "bg-light";
+  const lineBase =
+    "absolute left-0 right-0 top-1/2 h-[2px] -translate-y-1/2 rounded transition duration-75";
+
   return (
     <>
       {/* Button */}
@@ -67,10 +74,11 @@ export default function BurgerMenu() {
         className="relative z-[60] inline-flex h-8 w-10 items-center justify-center cursor-pointer group"
       >
         <div className="relative h-5 w-8">
+          {/* top line */}
           <motion.span
             className={clsx(
-              "absolute left-0 right-0 top-1/2 h-[2px] -translate-y-1/2 rounded transition duration-75",
-              open ? "bg-light" : "bg-expresso group-hover:-translate-y-0.5"
+              lineBase,
+              open ? "bg-light" : closedColor // <- toggles by scroll
             )}
             initial={false}
             animate={open ? "open" : "closed"}
@@ -81,10 +89,11 @@ export default function BurgerMenu() {
             transition={{ type: "spring", stiffness: 500, damping: 30 }}
             style={{ transformOrigin: "center" }}
           />
+          {/* bottom line */}
           <motion.span
             className={clsx(
-              "absolute left-0 right-0 top-1/2 h-[2px] -translate-y-1/2 rounded transition duration-75",
-              open ? "bg-light" : "bg-expresso group-hover:translate-y-0.5"
+              lineBase,
+              open ? "bg-light" : closedColor // <- toggles by scroll
             )}
             initial={false}
             animate={open ? "open" : "closed"}
@@ -137,7 +146,7 @@ export default function BurgerMenu() {
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={menuItems[active]?.img}
-                      className="absolute inset-0 bg-cover bg-center will-change-transform"
+                      className="rounded-xl absolute inset-0 bg-cover bg-center will-change-transform"
                       style={{
                         backgroundImage: `url(${menuItems[active]?.img})`,
                       }}

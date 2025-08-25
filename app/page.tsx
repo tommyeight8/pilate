@@ -1,4 +1,5 @@
 import Classes from "./components/Classes";
+import ContactSection from "./components/Contact";
 import Faq from "./components/Faq";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -14,6 +15,8 @@ export default function Home() {
       <Classes />
 
       <Faq />
+
+      <ContactSection />
     </main>
   );
 }

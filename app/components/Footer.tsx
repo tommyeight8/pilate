@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { SiFacebook, SiInstagram } from "react-icons/si";
 import { SlSocialTwitter } from "react-icons/sl";
 
@@ -8,12 +9,13 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Brand / Text */}
         <div className="text-center md:text-left">
-          <h2 className="text-3xl font-bold text-beige-50 font-playfair italic">
-            My Pilates
-          </h2>
-          <p className="text-sm text-beige-200 mt-2">
-            Move with strength, balance, and calm.
-          </p>
+          <Image
+            src="/pace_studio_word_logo.png"
+            alt=""
+            width={100}
+            height={50}
+            className="invert"
+          />
         </div>
 
         {/* Social icons */}

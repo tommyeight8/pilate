@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import BurgerMenu from "./BurgerMenu";
+import Image from "next/image";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,10 +23,17 @@ export default function Header() {
       )}
     >
       <div className="max-w-[1200px] mx-auto flex justify-between p-6">
-        <h1 className="text-4xl text-expresso font-bold font-playfair italic no-synth">
+        {/* <h1 className="text-4xl text-expresso font-bold font-playfair italic no-synth">
           My Pilates
-        </h1>
-        <BurgerMenu />
+        </h1> */}
+        <Image
+          src="/pace_studio_word_logo.png"
+          alt=""
+          width={100}
+          height={50}
+          className={clsx(scrolled ? "invert" : "")}
+        />
+        <BurgerMenu scrolled={scrolled} />
       </div>
     </header>
   );

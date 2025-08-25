@@ -38,7 +38,7 @@ const Classes = () => {
       <div className="flex items-center mb-12 md:mb-20">
         <div className="flex-grow border-t border-coffee"></div>
         <p className="mx-4 font-playfair italic text-6xl text-coffee text-center opsz-auto no-synth">
-          Classes
+          More Info
         </p>
         <div className="flex-grow border-t border-coffee"></div>
       </div>
@@ -51,65 +51,70 @@ const Classes = () => {
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
       >
-        {/* Card 1 */}
+        {/* Card 1 — Book */}
         <motion.div
           variants={item}
-          className="text-center h-[60vh] bg-[url('/pose-2.webp')] bg-cover bg-center flex justify-center items-center"
+          className="rounded-xl overflow-hidden text-center h-[60vh] bg-[url('/pose-2.webp')] bg-cover bg-center flex justify-center items-center"
         >
-          <div className="p-6 w-2/3 h-3/4 bg-bg/80 flex flex-col">
+          <div className="rounded-xl overflow-hidden p-6 w-2/3 h-3/4 bg-bg/80 flex flex-col">
             <h3 className="font-playfair text-lg font-medium text-expresso">
-              Mat Pilates
+              Book a Class
             </h3>
             <p className="font-playfair text-3xl mt-4 text-expresso">
-              Bodyweight core work; alignment and flexibility.
+              Build core strength, alignment, and flexibility with expert-led
+              sessions.
             </p>
             <Link
-              href="/"
+              href="/book"
+              aria-label="Book a class"
               className="mt-auto w-fit mx-auto bg-expresso text-light font-playfair font-medium font-lg py-1 px-5 cursor-pointer transition duration-200 hover:bg-expresso-alt rounded-4xl"
             >
-              Book
+              Book Now
             </Link>
           </div>
         </motion.div>
 
-        {/* Card 2 */}
+        {/* Card 2 — FAQs */}
         <motion.div
           variants={item}
-          className="text-center h-[60vh] bg-[url('/pose-3.webp')] bg-cover bg-center flex justify-center items-center"
+          className="rounded-xl overflow-hidden text-center h-[60vh] bg-[url('/pose-3.webp')] bg-cover bg-center flex justify-center items-center"
         >
-          <div className="p-6 w-2/3 h-3/4 bg-bg/80 flex flex-col">
+          <div className="rounded-xl overflow-hidden p-6 w-2/3 h-3/4 bg-bg/80 flex flex-col">
             <h3 className="font-playfair text-lg font-medium text-expresso">
-              Reformer Pilates
+              FAQs
             </h3>
             <p className="font-playfair text-3xl mt-4 text-expresso">
-              Spring-resisted, full-body strength with precise control.
+              Booking, cancellations, what to bring, and studio policies—quick
+              answers.
             </p>
             <Link
-              href="/"
+              href="/faqs"
+              aria-label="Read frequently asked questions"
               className="mt-auto w-fit mx-auto bg-expresso text-light font-playfair font-medium font-lg py-1 px-5 cursor-pointer transition duration-200 hover:bg-expresso-alt rounded-4xl"
             >
-              Book
+              Read FAQs
             </Link>
           </div>
         </motion.div>
 
-        {/* Card 3 */}
+        {/* Card 3 — Contact */}
         <motion.div
           variants={item}
-          className="text-center h-[60vh] bg-[url('/pose-4.webp')] bg-cover bg-center flex justify-center items-center"
+          className="rounded-xl overflow-hidden text-center h-[60vh] bg-[url('/pose-4.webp')] bg-cover bg-center flex justify-center items-center"
         >
-          <div className="p-6 w-2/3 h-3/4 bg-bg/80 flex flex-col">
+          <div className="rounded-xl overflow-hidden p-6 w-2/3 h-3/4 bg-bg/80 flex flex-col">
             <h3 className="font-playfair text-lg font-medium text-expresso">
-              Jumpboard/Cardio Reformer
+              Contact Us
             </h3>
             <p className="font-playfair text-3xl mt-4 text-expresso">
-              Low-impact cardio on reformer; power and endurance.
+              Questions or special requests? We’ll help you find the right fit.
             </p>
             <Link
-              href="/"
+              href="/contact"
+              aria-label="Contact the studio"
               className="mt-auto w-fit mx-auto bg-expresso text-light font-playfair font-medium font-lg py-1 px-5 cursor-pointer transition duration-200 hover:bg-expresso-alt rounded-4xl"
             >
-              Book
+              Get in Touch
             </Link>
           </div>
         </motion.div>
@@ -123,11 +128,11 @@ const Classes = () => {
         viewport={{ once: true }}
       >
         <Link
-          href={"/"}
+          href="/schedule"
           className="block w-fit font-playfair font-medium text-expresso px-6 py-2
             mt-8 hover:bg-secondary hover:text-bg transition duration-200 cursor-pointer text-lg m-auto"
         >
-          View All Classes
+          View Schedule
         </Link>
       </motion.div>
     </div>

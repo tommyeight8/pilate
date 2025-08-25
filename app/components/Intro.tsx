@@ -36,7 +36,7 @@ const Intro = () => {
 
       {/* Right image section */}
       <motion.div
-        className="w-1/2"
+        className="w-1/2 rounded-xl overflow-hidden"
         initial={{ opacity: 0, x: 60 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
