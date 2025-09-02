@@ -88,7 +88,7 @@ const Classes = () => {
               answers.
             </p>
             <Link
-              href="/faqs"
+              href="/faq"
               aria-label="Read frequently asked questions"
               className="mt-auto w-fit mx-auto bg-expresso text-light font-playfair font-medium font-lg py-1 px-5 cursor-pointer transition duration-200 hover:bg-expresso-alt rounded-4xl"
             >
@@ -121,7 +121,7 @@ const Classes = () => {
       </motion.div>
 
       {/* View All */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
@@ -134,7 +134,7 @@ const Classes = () => {
         >
           View Schedule
         </Link>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

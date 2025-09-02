@@ -2,10 +2,12 @@
 import Image from "next/image";
 import { SiFacebook, SiInstagram } from "react-icons/si";
 import { SlSocialTwitter } from "react-icons/sl";
+import Newsletter from "./Newsletter";
 
 export default function Footer() {
   return (
     <footer className="bg-espresso-800 text-coffee py-10 mt-20">
+      <Newsletter />
       <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Brand / Text */}
         <div className="text-center md:text-left">

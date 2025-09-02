@@ -9,6 +9,7 @@ import {
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Newsletter from "./components/Newsletter";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
     siteName: "Pilates Studio",
     images: [
       {
-        url: "/pose-1.webp", // place image in /public
+        url: "/pose-1.webp", // place image in /publicgive
         width: 1200,
         height: 630,
         alt: "Pilates class session",
@@ -86,9 +87,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${playfair.variable} ${bodoni.variable} antialiased`}>
-        {/* <Header /> */}
+        <Header />
         {children}
         <Footer />
+        {/* <Newsletter /> */}
       </body>
     </html>
   );
