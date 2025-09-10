@@ -5,7 +5,7 @@ require("dotenv").config({ path: ".env" });
 async function testModernFulfillment() {
   const SHOPIFY_DOMAIN = process.env.SHOPIFY_STORE_DOMAIN;
   const ACCESS_TOKEN = process.env.SHOPIFY_ACCESS_TOKEN;
-  const testOrderId = "6337551564963";
+  const testOrderId = "6337540849827";
 
   console.log("Testing Modern Shopify Fulfillment Workflow");
   console.log("==========================================");
